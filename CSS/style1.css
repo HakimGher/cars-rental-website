@@ -1,0 +1,393 @@
+body{
+    /*background-image: url("BG1.jpg");*/
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(255, 255, 255);
+    
+}
+.colonnes-colonne1{
+    
+    width: 10%;
+    /*background-color: gray;*/
+    height: 100%;
+    float: left;
+    
+}
+.colonnes-colonne2{
+   
+    width: 80%;
+    /* background-color: rgb(255, 0, 0);*/
+    height: 100%;
+    display: inline-block;
+    
+
+    
+}
+.colonnes-colonne3{
+    
+    width: 10%;
+    /*background-color: gray;*/
+    height: 100%;
+   float: right;
+    
+}
+.icon{
+    width: 200px;
+    /*background-color: aqua;*/
+    height: 35px;
+    padding: 2px;
+    margin:5px;
+}
+.login_register_btn{
+    width:200px;
+    /*background-color: blueviolet;*/
+    height:35px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    font-size: large;
+    font-weight: bold;
+    
+    text-align: right;
+    padding: 2px;
+    margin-right: 5px;
+
+}
+
+.buttonlr1 a  {
+  width: 120px;
+  height: 40px;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(250, 250, 250);
+  background-color: rgb(209, 0, 0);
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px; 
+  border-radius: 10px;
+  position: relative;
+  right: 50px;
+  bottom: 10px;
+  
+  
+
+  
+}
+
+.buttonlr1 a:hover{
+  background-color: rgb(133, 0, 0);
+
+}
+
+
+
+
+.buttonlr2 a {
+  width: 120px;
+  height: 40px;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(250, 250, 250);
+  background-color: rgb(94, 94, 94);
+  float: right;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px; 
+  border-radius: 10px;
+  position: relative;
+  bottom: 50px;
+
+  
+}
+
+.buttonlr2 a:hover{
+  background-color: rgb(58, 57, 57);
+
+}
+
+
+/*.btn-left a{
+    padding: 10px;
+    margin: 2px;
+    color: rgb(255, 255, 255);
+    background-color: #ff8800;
+    text-decoration: none;
+    display: inline-block;
+    float: left;
+    position: relative;
+    left:20px;
+   
+}
+
+.btn-left a:hover{
+  
+  
+  background-color: #b15f01;
+  display: inline-block;
+   
+ 
+ 
+}
+
+.btn-btn-right a{
+    padding: 2px;
+    margin: 2px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(131, 131, 131);
+    display: inline-block;
+    float: right;
+
+   
+}
+
+.btn-btn-right a:hover{
+  
+  background-color: rgb(66, 66, 66);
+  
+
+ 
+}*/
+
+
+.logo{
+    margin-top: 35px;
+    
+    padding: 2px;
+    
+}
+
+li{
+    
+    
+    display: inline-block;
+    
+    
+   
+    
+}
+
+.navbar{
+    float: right;
+    font-size: x-large;
+    
+    position: relative;
+    bottom: 70px;
+    margin-right: 2px;
+    
+ 
+  
+
+
+}
+
+.colortxt::after{
+    content: '';
+    display: block;
+    width:0;
+    height:2px;
+    background:  rgb(209, 0, 0);
+    transition: width .3s;
+
+
+}
+
+.colortxt:hover::after{
+    width:100%;
+    transition: width .3s;
+}
+
+li a{
+    display: inline-block;
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+    padding:6px;
+    
+ 
+   
+}
+
+#clrfooter{
+  color: azure;
+  position:relative;
+  right: 17px;
+}
+
+/*.activecase{ 
+    background-color: rgb(255, 153, 0);
+    padding: 5px;
+
+}*/
+
+#icon1{
+    
+    padding-right: 2px;
+}
+#icon2{
+    
+    padding-right: 2px;
+}
+#icon3{
+   
+    padding-right: 2px;
+}
+#icon4{
+   
+    padding-right: 2px;
+}
+
+
+.dot{
+    background-color: aqua;
+}
+
+
+/* slider_css*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+
+.imgsize {  
+    width: 100%;  
+    height: 550px ; 
+    display: flex;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    }  
+    .slider{
+      position: relative;
+      background: #000116;
+      width: 100%;
+      height: 550px;
+      bottom: 50px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    
+    .slider .slide{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      clip-path: circle(0% at 0 50%);
+    }
+    
+    .slider .slide.active{
+      clip-path: circle(150% at 0 50%);
+      transition: 2s;
+    }
+    
+    .slider .slide img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .slider .slide .info{
+      position: absolute;
+      color: #222;
+      background: rgba(255, 255, 255, 0.3);
+      width: 75%;
+      margin-top: 50px;
+      margin-left: 50px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+    }
+    
+    .slider .slide .info h2{
+      font-size: 2em;
+      font-weight: 800;
+    }
+    
+    .slider .slide .info p{
+      font-size: 1em;
+      font-weight: 400;
+    }
+    
+    .navigation{
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      position: relative;
+      top: 10px;
+    }
+    
+    .slider .navigation{
+      opacity: 1;
+    }
+    
+    .prev-btn, .next-btn{
+      z-index: 999;
+      font-size: 2em;
+      color: #222;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    .prev-btn{
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+    
+    .next-btn{
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    
+    .navigation-visibility{
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .navigation-visibility .slide-icon{
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.5);
+      width: 20px;
+      height: 10px;
+      transform: translateY(-50px);
+      margin: 0 6px;
+      border-radius: 2px;
+      box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+      position: relative;
+      top: 50px;
+      
+    }
+    
+    .navigation-visibility .slide-icon.active{
+      background: #db0202;
+    }
+    
+    @media (max-width: 900px){
+      .slider{
+        width: 100%;
+      }
+    
+      .slider .slide .info{
+        position: relative;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    
+    @media (max-width: 500px){
+      .slider .slide .info h2{
+        font-size: 1.8em;
+        line-height: 40px;
+      }
+    
+      .slider .slide .info p{
+        font-size: 0.9em;
+      }
+    }
+          

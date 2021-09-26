@@ -1,0 +1,321 @@
+<html>
+<head>
+<title>TP Web - HTML - CSS (Header)</title>
+<link rel="stylesheet" type="text/css" href="CSS/style1.css">
+<link rel="stylesheet" type="text/css" href="CSS/style2.css">
+<link rel="icon" type="images/png" href="images/logo.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<meta name="viewport" content="width=device-width"/>
+</head>
+<body>
+<div>
+    <div class="colonnes-colonne1"></div>
+    <div class="colonnes-colonne2">
+        <div class="social_icon" style="width: 100%;">
+            <div class="container">
+                <div>
+                    <div class="icon">
+                        <a href="https://facebook.com" target="_blank"><img id="icon1" src="images/fb.png"></a>
+                        <a href="https://twitter.com" target="_blank"><img id="icon2" src="images/twt.png"></a>
+                        <a href="https://instagram.com" target="_blank"><img id="icon3"src="images/insta.png"></a>
+                        <a href="https://linkedin.com" target="_blank"><img id="icon4"src="images/in.png"></a>
+                    </div>
+                    <div class="header_right">
+                        <div class="login_register_btn">
+                          <div class="buttonlr1">
+                            <a href="HTML-JS-PHP/login.php" class="btn-left">LOGIN</a>
+                          </div>
+                          <div class="buttonlr2">
+                            <a href="HTML-JS-PHP/register.php" class="btn-btn-right">REGISTER</a>
+                          </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="header">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="#"><img width="200px" src="images/LOGO4.png"></a>
+                        </div>
+                        <div class="navbar">
+                            <ul>
+                            <li ><a class="colortxt" href="index.html">Accueil</a></li>
+                            <li><a class="colortxt" href="HTML-JS-PHP/Location.html">Location</a></li>
+                            
+                            <li><a class="colortxt" href="HTML-JS-PHP/aboutus.html">About us</a></li>
+                            <li><a class="colortxt" href="HTML-JS-PHP/contactus.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+          <div class="slide active">
+            <img class="imgsize" src="images/1.jpg" alt="">
+            <div class="info">
+              <h2>La location de voiture en mieux</h2>
+              <p>Le libre-service, une révolution dans la location de voiture.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="imgsize" src="images/2.jpg" alt="">
+            <div class="info">
+              <h2>Sans file d'attente, sans paperasse</h2>
+              <p>Réservez et déverrouillez une voiture premium depuis votre smartphone, à tout moment.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img class="imgsize" src="images/3.jpg" alt="">
+            <div class="info">
+              <h2>Des voitures qui donnent envie de conduire</h2>
+              <p>Une voiture pour chaque occasion.</p>
+            </div>
+          </div>
+          
+          <div class="navigation">
+            <i class="fas fa-chevron-left prev-btn"></i>
+            <i class="fas fa-chevron-right next-btn"></i>
+          </div>
+          <div class="navigation-visibility">
+            <div class="slide-icon active"></div>
+            <div class="slide-icon"></div>
+            <div class="slide-icon"></div>
+            
+          </div>
+        </div>
+      
+        <script type="text/javascript">
+          const slider = document.querySelector(".slider");
+          const nextBtn = document.querySelector(".next-btn");
+          const prevBtn = document.querySelector(".prev-btn");
+          const slides = document.querySelectorAll(".slide");
+          const slideIcons = document.querySelectorAll(".slide-icon");
+          const numberOfSlides = slides.length;
+          var slideNumber = 0;
+      
+          //image slider next button
+          nextBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+              slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+              slideIcon.classList.remove("active");
+            });
+      
+            slideNumber++;
+      
+            if(slideNumber > (numberOfSlides - 1)){
+              slideNumber = 0;
+            }
+      
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+          });
+      
+          //image slider previous button
+          prevBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+              slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+              slideIcon.classList.remove("active");
+            });
+      
+            slideNumber--;
+      
+            if(slideNumber < 0){
+              slideNumber = numberOfSlides - 1;
+            }
+      
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+          });
+      
+          //image slider autoplay
+          var playSlider;
+      
+          var repeater = () => {
+            playSlider = setInterval(function(){
+              slides.forEach((slide) => {
+                slide.classList.remove("active");
+              });
+              slideIcons.forEach((slideIcon) => {
+                slideIcon.classList.remove("active");
+              });
+      
+              slideNumber++;
+      
+              if(slideNumber > (numberOfSlides - 1)){
+                slideNumber = 0;
+              }
+      
+              slides[slideNumber].classList.add("active");
+              slideIcons[slideNumber].classList.add("active");
+            }, 4000);
+          }
+          repeater();
+      
+          //stop the image slider autoplay on mouseover
+          slider.addEventListener("mouseover", () => {
+            clearInterval(playSlider);
+          });
+      
+          //start the image slider autoplay again on mouseout
+          slider.addEventListener("mouseout", () => {
+            repeater();
+          });
+          </script>
+
+        <br>
+
+       
+
+       
+        <!-- Texte -->
+       
+       <div class=txtcontainer>
+            <div class="marge"></div>
+            <div class="texte">
+                <h2 class="offre">Nos offres du moment</h2>
+            </div> 
+
+       </div>
+
+       <br>
+
+      <!-- Les cartes de produits -->  
+    <div class="row">
+            <div class=containerrow >
+            <div class="col1">
+                <div class="card card1">
+                    <img
+                      src="images/tesla.png"
+                    />
+                    <div class="card-content">
+                      <h2>Tesla Model 3 </h2>
+                      <p class="price">63€ / jour</p>
+                      <p>La voiture la plus cool est arrivée et elle est prête à électrifier votre voyage.</p>
+                    </div>
+              
+                    <button>Details</button>
+                  </div>
+            </div>
+            <div class="col2">
+                <div class="card card2">
+                    <img
+                      src="images/kona.png"
+                    />
+                    <div class="card-content">
+                      <h2>Hyundai Kona</h2>
+                      <p class="price">45€ / jour</p>
+                      <p>Le SUV urbain 100% électrique offrant une autonomie à la hauteur de vos aventures.</p>
+                    </div>
+              
+                    <button>Details</button>
+                  </div>
+                
+            </div>
+            <div class="col3">
+                <div class="card card3">
+                    <img
+                      src="images/208.png"
+                    />
+                    <div class="card-content">
+                      <h2>Peugeot 208</h2>
+                      <p class="price">30€ / jour</p>
+                      <p>Une voiture compacte sans compromis, au meilleur rapport qualité prix.</p>
+                    </div>
+              
+                    <button>Details</button>
+                  </div>
+                
+            </div>
+          </div>
+            
+           
+    </div>
+
+    <!--pubs-->
+
+    <div class="row_pub">
+      <div class="col1_pub">
+          <div class="pub1">
+              <img
+                src="images/dispo.jpg"
+              />
+              <div class="card-content">
+                <h2>Disponible 24h/24 et 7j/7</h2>
+                
+                <p>Réservez et commencez votre location à tout moment : la nuit, le jour, quand vous voulez, en totale autonomie.<br/>
+                <br/> </p>
+              </div>
+        
+              
+            </div>
+      </div>
+      <div class="col2_pub">
+          <div class="pub2">
+              <img
+                src="images/livraison.jpg"
+              />
+              <div class="card-content">
+                <h2>Option de livraison </h2>
+                <p>Gagnez du temps avec notre option de livraison, votre voiture est déposée devant votre porte. Au retour, un de nos voituriers viendra la récupérer.</p>
+              </div>
+        
+          </div>
+          
+      </div>
+      <div class="col3_pub">
+          <div class="pub3">
+              <img
+                src="images/premium.jpg"
+              />
+              <div class="card-content">
+                <h2>Une voiture premium </h2>
+                
+                <p>SUV ou compacte, Tesla, Mercedes ou BMW, la voiture que vous conduisez est celle que vous avez réservée ! Chez nous, le modèle est garanti.</p>
+              </div>
+        
+              
+            </div>
+          
+      </div>
+      
+     
+</div>
+    
+     <!-- Footer -->
+    <div class="footer">
+        
+            <div class="left-foot-container">
+                <h1 class="trfooter">" <span class="creative">ENJOY</span> DRIVING "</h1>
+                <ul >
+                  <li ><a class="colortxt"  id="clrfooter" href="index.html">Accueil</a></li>
+                  <li><a class="colortxt" id="clrfooter" href="HTML-JS-PHP/Location.html">Location</a></li>
+                  
+                  <li><a class="colortxt" id="clrfooter" href="HTML-JS-PHP/aboutus.html">About us</a></li>
+                  <li><a class="colortxt" id="clrfooter" href="HTML-JS-PHP/contactus.html">Contact us</a></li>
+                </ul>
+                <h4 class="copy">Copyright © 2021</h4>
+                <div class="icon_f">
+                    <a href="https://facebook.com" target="_blank"><img id="icon1" src="images/icon1.png"></a>
+                    <a href="https://twitter.com" target="_blank"><img id="icon2" src="images/icon2.png"></a>
+                    <a href="https://instagram.com" target="_blank"><img id="icon3"src="images/icon3.png"></a>
+                    <a href="https://linkedin.com" target="_blank"><img id="icon4"src="images/icon4.png"></a>
+                </div>
+            </div>
+       
+        
+    </div>
+    </div>
+    
+   
+
+    <div class="colonnes-colonne3"></div>
+</div>
+
+<script src="javascript/script.js"></script> <!-- relier le fichier javascript au fichier html-->
+</body>
+</html>
